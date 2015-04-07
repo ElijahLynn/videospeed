@@ -5,7 +5,7 @@ function recordKeyPress(e) {
 
   e.preventDefault();
   e.stopPropagation();
-};
+}
 
 function inputFilterNumbersOnly(e) {
   var char = String.fromCharCode(e.keyCode);
@@ -13,15 +13,15 @@ function inputFilterNumbersOnly(e) {
     e.preventDefault();
     e.stopPropagation();
   }
-};
+}
 
 function inputFocus(e) {
    e.target.value = "";
-};
+}
 
 function inputBlur(e) {
    e.target.value = String.fromCharCode(e.target.keyCode).toUpperCase();
-};
+}
 
 function updateShortcutInputText(inputId, keyCode) {
   document.getElementById(inputId).value = String.fromCharCode(keyCode).toUpperCase();
@@ -117,4 +117,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.getElementById('rewindTime').addEventListener('keypress', inputFilterNumbersOnly);
   document.getElementById('speedStep').addEventListener('keypress', inputFilterNumbersOnly);
-})
+});
